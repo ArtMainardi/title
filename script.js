@@ -22,21 +22,16 @@ const flowerVarieties = [
 
 // ---------------------> Ouvir os Toques (goat dmais)
 grassContainer.addEventListener('click', (event) => {
-  const spawnVideo = document.createElement('video');
+  const spawnAnimation = document.createElement('div');
+  spawnAnimation.classList.add('spawn-animation');
   
-  spawnVideo.src = './assets/rosa-brotando.mp4';
-  spawnVideo.autoplay = true;
-  spawnVideo.muted = true;
-  spawnVideo.playsInline = true;
-
-  spawnVideo.classList.add('idle-flower'); 
   const rect = grassContainer.getBoundingClientRect();
   const flowerX = event.clientX - rect.left - 40;
   const flowerY = event.clientY - rect.top - 40;
-  spawnVideo.style.left = `${flowerX}px`;
-  spawnVideo.style.top = `${flowerY}px`;
+  spawnAnimation.style.left = `${flowerX}px`;
+  spawnAnimation.style.top = `${flowerY}px`;
 
-  grassContainer.appendChild(spawnVideo);
+  grassContainer.appendChild(spawnAnimation);
   
   spawnVideo.addEventListener('ended', () => {
     const idleFlower = document.createElement('div');
@@ -49,7 +44,7 @@ grassContainer.addEventListener('click', (event) => {
 
     grassContainer.appendChild(idleFlower);
 
-    spawnVideo.remove();
+    spawnAnimation.remove();
   });
   
   touchCount++;
