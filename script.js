@@ -24,7 +24,7 @@ const flowerVarieties = [
 grassContainer.addEventListener('click', (event) => {
   const spawnVideo = document.createElement('video');
   
-  spawnVideo.src = './assets/rosa-brotando.webm';
+  spawnVideo.src = './assets/rosa-brotando.mp4';
   spawnVideo.autoplay = true;
   spawnVideo.muted = true;
   spawnVideo.playsInline = true;
