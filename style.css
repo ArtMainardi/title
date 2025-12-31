@@ -82,7 +82,7 @@ body {
   
   background-image: url('./rosa-brotando-sprite.png');
   background-size: 400% 400%;
-  animation: brotar-anim 1s steps(14) forwards;
+  animation: brotar-anim 0.1s steps(16) forwards;
 }
 
 @keyframes brotar-anim {
