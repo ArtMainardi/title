@@ -75,6 +75,22 @@ body {
   }
 }
 
+.spawn-animation {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  
+  background-image: url('./rosa-brotando-sprite.png');
+  background-size: 400% 400%;
+  animation: brotar-anim 1s steps(14) forwards;
+}
+
+@keyframes brotar-anim {
+  to {
+    background-position: 100% 100%;
+  }
+}
+
 @keyframes fadeIn {
   from { opacity: 0; transform: scale(0.5); }
   to { opacity: 1; transform: scale(1); }
