@@ -43,21 +43,18 @@ body {
   align-self: start;
 }
 .sun {
-  position: absolute;
-  top: 20px; 
-  right: 20px;
-  width: 100px; 
-  height: 100px;
+  width: 28.58vw; 
+  height: 28.58vw;
   
   background-image: url('./assets/sol-sprite.png');
   
-  background-size: 200px 100px; 
+  background-size: 60vw 30vw; 
   
   animation: sol-pulsa 2s steps(2) infinite;
 }
 @keyframes sol-pulsa {
   to {
-    background-position: -200px 0;
+    background-position: -60vw 0;
   }
 }
 
