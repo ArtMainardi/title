@@ -45,7 +45,7 @@ body {
 .sun {
   position: absolute;
   top: 20px; 
-  left: 20px;
+  right: 20px;
   width: 100px; 
   height: 100px;
   
@@ -59,7 +59,8 @@ body {
   to {
     background-position: -200px 0;
   }
-  
+}
+
 .subtitle {
   font-size: 20px;
   color: #FFFFFF;
