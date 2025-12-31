@@ -24,7 +24,7 @@ const flowerVarieties = [
 grassContainer.addEventListener('click', (event) => {
   const spawnAnimation = document.createElement('div');
   spawnAnimation.classList.add('spawn-animation');
-  
+
   const rect = grassContainer.getBoundingClientRect();
   const flowerX = event.clientX - rect.left - 40;
   const flowerY = event.clientY - rect.top - 40;
@@ -32,29 +32,28 @@ grassContainer.addEventListener('click', (event) => {
   spawnAnimation.style.top = `${flowerY}px`;
 
   grassContainer.appendChild(spawnAnimation);
-  
-  spawnVideo.addEventListener('ended', () => {
+
+  spawnAnimation.addEventListener('animationend', () => {
     const idleFlower = document.createElement('div');
     
     idleFlower.classList.add('idle-flower'); 
-    idleFlower.classList.add('idle-rosa'); 
+    idleFlower.classList.add('idle-rosa');
 
-    idleFlower.style.left = spawnVideo.style.left;
-    idleFlower.style.top = spawnVideo.style.top;
+    idleFlower.style.left = spawnAnimation.style.left;
+    idleFlower.style.top = spawnAnimation.style.top;
 
     grassContainer.appendChild(idleFlower);
 
     spawnAnimation.remove();
-  });
-  
+
+  }, { once: true });
+
   touchCount++;
-  
   if (touchCount >= touchesForSurprise) {
     isSurpriseActive = true;
     showPresentBox();
   }
 });
-
 
 /*============================================================*/
 // -------------Função Mostrar Mensagem Surpresa <-----------------------------------------------
