@@ -43,18 +43,21 @@ body {
   align-self: start;
 }
 .sun {
-  width: 28.58vw; 
-  height: 28.58vw;
+  position: absolute;
+  top: 20px; 
+  right: 20px;
+  width: 200px; 
+  height: 200px;
   
   background-image: url('./assets/sol-sprite.png');
   
-  background-size: 60vw 30vw; 
+  background-size: 400px 200px; 
   
   animation: sol-pulsa 2s steps(2) infinite;
 }
 @keyframes sol-pulsa {
   to {
-    background-position: -60vw 0;
+    background-position: -400px 0;
   }
 }
 
@@ -225,6 +228,16 @@ body {
   }
   .sky-container {
     width: 100%;
+  }
+  .sun {
+    width: 28.58vw; 
+    height: 28.58vw;
+    background-size: 60vw 30vw; 
+  }
+  @keyframes sol-pulsa {
+    to {
+      background-position: -60vw 0;
+    }
   }
   .grass-container {
     width: 100%;
