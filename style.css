@@ -77,17 +77,18 @@ body {
 
 .spawn-animation {
   position: absolute;
-  width: 80px;
+  width: 80px; 
   height: 80px;
   
   background-image: url('./rosa-brotando-sprite.png');
-  background-size: 400% 400%;
-  animation: brotar-anim 0.1s steps(16) forwards;
+  
+  background-size: 320px 320px; 
+  animation: brotar-anim 0.1s steps(16) forwards; 
 }
 
 @keyframes brotar-anim {
   to {
-    background-position: 100% 100%;
+    background-position: right bottom; 
   }
 }
 
