@@ -182,16 +182,14 @@ body {
 /* ------------- Carta <--------------------------------------------------------*/
 /* ================================================ */
 .letter-container {
-  position: fixed; 
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  
   display: flex;
   justify-content: center;
   align-items: center;
-  
   opacity: 0;
   transform: scale(0.5);
   pointer-events: none;
@@ -207,7 +205,8 @@ body {
 
 .letter-content {
   position: relative;
-  background: #FFFFFF;
+  background: #FFFFFF; /* Fundo branco */
+  color: #333333;      /* <<<<<<< ADICIONE ESTA LINHA! (Cor do texto quase preta) */
   padding: 40px;
   border-radius: 10px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.3);
@@ -246,6 +245,47 @@ body {
 .close-letter-button::before {
   content: 'X';
 }
+
+
+
+/* ================================================ */
+/* ------------- Animação da Carta (v2) <----------- */
+/* ================================================ */
+
+.letter-content .message-line {
+  opacity: 0; /* Começa invisível */
+  animation: fadeInText 1s ease-in forwards; /* Animação de aparecer */
+  animation-play-state: paused; /* Começa pausada */
+}
+
+@keyframes fadeInText {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.letter-container.show .message-line {
+  animation-play-state: running;
+}
+
+/* Atraso para cada linha aparecer em sequência */
+.letter-container.show .line-1 { animation-delay: 0.5s; }
+.letter-container.show .line-2 { animation-delay: 1.5s; }
+.letter-container.show .line-3 { animation-delay: 3.0s; }
+.letter-container.show .line-4 { animation-delay: 4.5s; }
+.letter-container.show .line-5 { animation-delay: 6.0s; }
+.letter-container.show .line-6 { animation-delay: 7.5s; }
+.letter-container.show .line-7 { animation-delay: 9.0s; }
+
+/* Ajustes para a lista dentro da linha 3 */
+.message-line ul {
+  list-style-type: none;
+  padding-left: 10px;
+  margin-top: 10px;
+}
+.message-line li {
+  padding-bottom: 5px;
+}
+
 
 
 
