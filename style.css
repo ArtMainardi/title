@@ -186,9 +186,6 @@ body {
 /* ================================================ */
 /* ------------- Carta <--------------------------------------------------------*/
 /* ================================================ */
-/* ================================================ */
-/* ------------- Carta <--------------------------------------------------------*/
-/* ================================================ */
 .letter-container {
   position: fixed; 
   top: 0;
@@ -217,7 +214,7 @@ body {
   position: relative;
   background: #FFFFFF;
   padding: 40px;
-  border-radius: 10px;
+  border-radius: 25px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.3);
   
   width: 500px;
@@ -233,7 +230,7 @@ body {
 
 .message-text {
   line-height: 1.7; 
-  font-size: 1.1em;
+  font-size: 16px;
   color: #333;
 }
 
@@ -262,9 +259,9 @@ body {
 /* ================================================ */
 
 .letter-content .message-line {
-  opacity: 0; /* Começa invisível */
-  animation: fadeInText 1s ease-in forwards; /* Animação de aparecer */
-  animation-play-state: paused; /* Começa pausada */
+  opacity: 0; 
+  animation: fadeInText 1s ease-in forwards; 
+  animation-play-state: paused;
 }
 
 @keyframes fadeInText {
@@ -273,23 +270,23 @@ body {
 }
 
 .letter-container.show .message-line {
+  font-size: 16px;
   animation-play-state: running;
 }
 
 .letter-content .line-1 {
-  font-size: 1.3em; /* Um pouco maior que o texto normal (1.1em) */
-  font-weight: bold; /* Coloca em negrito */
-  margin-bottom: 20px; /* Adiciona um espaço extra abaixo do título */
+  font-size: 20px !important;
+  font-weight: bold;
+  margin-bottom: 20px; 
 }
 
 .letter-content .final-wish {
-  display: block; /* Faz o span se comportar como um parágrafo, quebrando a linha */
-  margin-bottom: 15px; /* Adiciona um espaço acima dele */
-  font-style: italic; /* Coloca em itálico */
-  color: #777777; /* Um tom de cinza médio, suave */
+  display: block; 
+  margin-bottom: 15px; 
+  font-style: italic; 
+  color: #777777; 
 }
 
-/* Atraso para cada linha aparecer em sequência */
 .letter-container.show .line-1 { animation-delay: 0.5s; }
 .letter-container.show .line-2 { animation-delay: 1.5s; }
 .letter-container.show .line-3 { animation-delay: 3.0s; }
@@ -298,7 +295,6 @@ body {
 .letter-container.show .line-6 { animation-delay: 7.5s; }
 .letter-container.show .line-7 { animation-delay: 9.0s; }
 
-/* Ajustes para a lista dentro da linha 3 */
 .message-line ul {
   list-style-type: none;
   padding-left: 10px;
@@ -331,6 +327,12 @@ body {
       background-position: -60vw 0;
     }
   }
+  .subtitle {
+  bottom: 2.25vw; 
+  font-size: 3.75vw; 
+  font-weight: 400;
+  text-shadow: 2px 2px 3px rgb(0 0 0 / 20%); 
+}
   .grass-container {
     width: 100%;
   }
@@ -354,26 +356,37 @@ body {
   }
 
 
-  /* ------------- Carta <----------------------------------*/
-  .letter-container {
-    width: 100%;
-    height: 100%;
-  }
+  /* ------------- Carta <--------------------------------------------------------*/
   .letter-content {
-    padding: 40px;
-    border-radius: 10px;
+    padding: 6vw;
+    border-radius: 3.75vw;
     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-    width: 90%;
+    width: 85vw;
     min-height: 33vh; 
   }
-  .message-text {
-    line-height: 1.7; 
-    font-size: 1.1em;
-  }
   .close-letter-button {
-    top: 10px;
-    right: 10px;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-}
+    top: 1.5vw;
+    right: 1.5vw;
+    width: 4.5vw;
+    height: 4.5vw;
+  }
+
+  
+  /* ------------- Animação da Carta (v2) <----------- */
+  .letter-container.show .message-line {
+    font-size: 2.6vw;
+  }
+  .letter-content .line-1 {
+    font-size: 3.8vw !important;
+    margin-bottom: 3vw; 
+  }
+  .letter-content .final-wish {
+    margin-bottom: 2.25vw; 
+  }
+  .message-line ul {
+    padding-left: 1.5vw;
+    margin-top: 1.5vw;
+  }
+  .message-line li {
+    padding-bottom: 0.75vw;
+  }
