@@ -197,7 +197,6 @@ body {
   align-items: center;
   opacity: 0;
   transform: scale(0.5);
-  pointer-events: none;
   transition: opacity 0.5s ease-in-out;
   z-index: 100;
 }
@@ -205,7 +204,6 @@ body {
 .letter-container.show {
   opacity: 1;
   transform: scale(1); 
-  pointer-events: auto;
 }
 
 .letter-content {
@@ -270,6 +268,19 @@ body {
 
 .letter-container.show .message-line {
   animation-play-state: running;
+}
+
+.letter-content .line-1 {
+  font-size: 1.3em; /* Um pouco maior que o texto normal (1.1em) */
+  font-weight: bold; /* Coloca em negrito */
+  margin-bottom: 20px; /* Adiciona um espaço extra abaixo do título */
+}
+
+.letter-content .final-wish {
+  display: block; /* Faz o span se comportar como um parágrafo, quebrando a linha */
+  margin-top: 15px; /* Adiciona um espaço acima dele */
+  font-style: italic; /* Coloca em itálico */
+  color: #777777; /* Um tom de cinza médio, suave */
 }
 
 /* Atraso para cada linha aparecer em sequência */
