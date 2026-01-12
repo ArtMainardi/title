@@ -92,7 +92,7 @@ body {
   }
 }
 
-grass-container {
+.grass-container {
   width: 700px;
   height: 65vh;
   cursor: pointer;
