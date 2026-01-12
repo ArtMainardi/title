@@ -186,17 +186,23 @@ body {
 /* ================================================ */
 /* ------------- Carta <--------------------------------------------------------*/
 /* ================================================ */
+/* ================================================ */
+/* ------------- Carta <--------------------------------------------------------*/
+/* ================================================ */
 .letter-container {
-  position: fixed;
+  position: fixed; 
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  
   display: flex;
   justify-content: center;
   align-items: center;
+  
   opacity: 0;
   transform: scale(0.5);
+  pointer-events: none;
   transition: opacity 0.5s ease-in-out;
   z-index: 100;
 }
@@ -204,12 +210,12 @@ body {
 .letter-container.show {
   opacity: 1;
   transform: scale(1); 
+  pointer-events: auto;
 }
 
 .letter-content {
   position: relative;
-  background: #FFFFFF; /* Fundo branco */
-  color: #333333;      /* <<<<<<< ADICIONE ESTA LINHA! (Cor do texto quase preta) */
+  background: #FFFFFF;
   padding: 40px;
   border-radius: 10px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.3);
@@ -278,7 +284,7 @@ body {
 
 .letter-content .final-wish {
   display: block; /* Faz o span se comportar como um parágrafo, quebrando a linha */
-  margin-top: 15px; /* Adiciona um espaço acima dele */
+  margin-bottom: 15px; /* Adiciona um espaço acima dele */
   font-style: italic; /* Coloca em itálico */
   color: #777777; /* Um tom de cinza médio, suave */
 }
