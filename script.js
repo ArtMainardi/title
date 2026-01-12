@@ -133,6 +133,11 @@ body {
   background-size: 160px 80px;
   animation: espera-anim 1s steps(2) infinite;
 }
+.idle-gira-sol {
+  background-image: url('./assets/gira-sol-espera-sprite.png');
+  background-size: 160px 80px;
+  animation: espera-anim 1s steps(2) infinite;
+}
 
 @keyframes espera-anim {
   to {
