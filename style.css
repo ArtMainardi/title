@@ -281,7 +281,7 @@ body {
   animation: espera-anim 1s steps(2) infinite;
 }
 .idle-lirio-do-vale {
-  background-image: url('./assets/lirio-do-vale-espera-sprite.png');
+  background-image: url('./assets/lirio-do-vale-espera-sprite2.png');
   background-size: 160px 80px;
   animation: espera-anim 1s steps(2) infinite;
 }
