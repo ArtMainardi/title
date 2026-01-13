@@ -54,7 +54,9 @@ grassContainer.addEventListener('click', (event) => {
   spawnAnimation.style.top = `${flowerY}px`;
   grassContainer.appendChild(spawnAnimation);
 
-  animateSprite(spawnAnimation, 16, 160, () => {
+  spawnAnimation.style.zIndex = Math.round(flowerY);
+
+  animateSprite(spawnAnimation, 16, 100, () => {
     
     const idleFlower = document.createElement('div');
     idleFlower.classList.add('idle-flower'); 
@@ -62,6 +64,8 @@ grassContainer.addEventListener('click', (event) => {
 
     idleFlower.style.left = spawnAnimation.style.left;
     idleFlower.style.top = spawnAnimation.style.top;
+
+    idleFlower.style.zIndex = spawnAnimation.style.zIndex;
 
     grassContainer.appendChild(idleFlower);
 
