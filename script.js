@@ -27,7 +27,7 @@ const flowerCatalog = [
     idleSprite: './assets/gira-sol-espera-sprite.png'    // Spritesheet de 2 frames
   },
   {
-    name: 'lírio-do-vale',
+    name: 'lirio-do-vale',
     spawnSprite: './assets/lirio-do-vale-brotando-sprite.png', // Spritesheet de 16 frames
     idleSprite: './assets/lirio-do-vale-espera-sprite.png'    // Spritesheet de 2 frames
   },
