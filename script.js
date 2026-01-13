@@ -28,8 +28,8 @@ const flowerCatalog = [
   },
   {
     name: 'lírio-do-vale',
-    spawnSprite: './assets/lírio-do-vale-brotando-sprite.png', // Spritesheet de 16 frames
-    idleSprite: './assets/lírio-do-vale-espera-sprite.png'    // Spritesheet de 2 frames
+    spawnSprite: './assets/lirio-do-vale-brotando-sprite.png', // Spritesheet de 16 frames
+    idleSprite: './assets/lirio-do-vale-espera-sprite.png'    // Spritesheet de 2 frames
   },
   {
     name: 'margarida',
