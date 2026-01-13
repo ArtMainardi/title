@@ -25,6 +25,11 @@ const flowerCatalog = [
     name: 'gira-sol',
     spawnSprite: './assets/gira-sol-brotando-sprite.png', // Spritesheet de 16 frames
     idleSprite: './assets/gira-sol-espera-sprite.png'    // Spritesheet de 2 frames
+  },
+  {
+    name: 'lírio-do-vale',
+    spawnSprite: './assets/lírio-do-vale-brotando-sprite.png', // Spritesheet de 16 frames
+    idleSprite: './assets/lírio-do-vale-espera-sprite.png'    // Spritesheet de 2 frames
   }
 ];
 
