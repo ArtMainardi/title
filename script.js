@@ -5,7 +5,6 @@ const closeLetterButton = document.querySelector('.close-letter-button');
 const touchCounterElement = document.querySelector('#touch-counter'); 
 const currentTouchesSpan = document.querySelector('#current-touches');
 
-
 /*============================================================*/
 // ------------------------Código <---------------------------------------------------------------
 /*============================================================*/
