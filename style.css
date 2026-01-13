@@ -503,7 +503,7 @@ body {
   
   /* ------------- Animação da Carta (v2) <----------- */
   .letter-container.show .message-line {
-    font-size: 2.6vw;
+    font-size: clamp( 0.8rem, 2.7vw, 1rem);
   }
   .letter-content .line-1 {
     font-size: 3.8vw !important;
