@@ -125,6 +125,7 @@ body {
     radial-gradient(circle at 10% 20%, rgb(108 154 51 / 40%) 0%, transparent 40%),
     
     linear-gradient(180deg, #C1F387, #5aa73b);
+   -webkit-tap-highlight-color: transparent;
 }
 .spawn-animation {
   position: absolute;
